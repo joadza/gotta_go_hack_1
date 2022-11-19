@@ -1,3 +1,19 @@
+.card {
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card .card-image {
+    width: 100%;
+}
+
+.card .card-image img {
+    width: 100%;
+    max-height: 340px;
+    object-fit: cover;
+}
+
+/*------------------------------------*/
 .bd-placeholder-img {
     font-size: 1.125rem;
     text-anchor: middle;
@@ -48,3 +64,65 @@
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
   }
+
+/* CSS */
+/* Navbar */ 
+.navbar{
+  background: #8FDFF9;
+}
+
+/* CTA */
+.cta{
+  background: #8FDFF9;
+  color: #fff;
+  border-radius: 5px;
+  padding: 2%;
+  border: none;
+}
+
+.col{
+  margin-bottom: 5%;
+}
+
+.shadow-sm{
+  box-shadow: 0 0.5rem 0.5rem #B7D5EA !important;
+}
+
+.card-body{
+  background: #8FDFF9;
+  opacity: 0.9;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-text{
+  font-size: 1.5rem;
+}
+
+.link{
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.pourcent{
+  font-size: 2rem;
+  font-weight: 600;
+  border-radius: 50%;
+  background: #fff;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pourcent p{
+  color: #DACD89;
+}
+
+.page-footer{
+  background: #8FDFF9;
+  color: #fff;
+  padding: 2%;
+}
