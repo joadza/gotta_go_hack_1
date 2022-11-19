@@ -7,12 +7,10 @@ include 'fonction2.php';
 
 <?php
 
-get_all_donates($bdd);
+$result = get_all_donates($bdd);
 
-for ($i = 1; $i <= 2; $i++) {
-    $score = get_value_corremation_donate($bdd, $i);
-    echo $score;
-    echo $i;
+foreach ($result as $row) {
+    var_dump($row);
 }
 
 

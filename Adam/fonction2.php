@@ -7,10 +7,19 @@ function get_all_donates($bdd)
     $poo = $bdd->prepare("SELECT * FROM tab_donneur");
     $result = $poo->execute();
     $result = $poo->fetchAll();
+    return $result;
 }
 
 
-function get_value_corremation_donate($bdd, $id_donate)
+function get_image($bdd, $id)
+{
+    $poo = $bdd->prepare("SELECT photo_profil FROM tab_donneur WHERE id = " + $id);
+    $result = $poo->execute();
+    $result = $poo->fetch();
+    return $result;
+}
+
+function get_value_correlation_donate($bdd, $id_donate)
 {
     $nb;
     $score = 0;
@@ -31,7 +40,6 @@ function get_value_corremation_donate($bdd, $id_donate)
         'wittiness' => '68',
     );
     //push information in tab
-    var_dump($id_donate);
     $poo = $bdd->prepare("SELECT * FROM tab_donneur WHERE `id_donneur` = " . $id_donate);
 
     $result = $poo->execute();
@@ -43,7 +51,6 @@ function get_value_corremation_donate($bdd, $id_donate)
 
             case 'sexual_orientation':
                 if ($value == $tab_questionaire['sexual_orientation']) {
-                    var_dump("Cocuuo");
                     $score += 40;
                 }
                 break;
@@ -119,9 +126,9 @@ function get_value_corremation_donate($bdd, $id_donate)
         }
     }
 
-    var_dump($score);
 
-    return $score;
+
+    return $score / 10;
 
 
     #On affiche toutes les données que l'on récupère
