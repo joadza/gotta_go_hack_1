@@ -1,9 +1,9 @@
-
 <?php
 include 'connexion_bd.php';
 include 'fonction2.php';
 
 ?>
+<img class="fit-picture" src="media/1.jpg" alt="Grapefruit slice atop a pile of other slices">
 
 <?php
 
