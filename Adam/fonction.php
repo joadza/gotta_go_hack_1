@@ -42,9 +42,8 @@ function get_value_corremation_donate($bdd, $id_donate)
     $result = $poo->execute();
     $result = $poo->fetch();
     var_dump($result);
-    foreach ($tab_questionaire as $value) {
-        var_dump($tab_questionaire[0]);
-    }
+
+
 
 
 
