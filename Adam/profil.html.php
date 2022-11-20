@@ -4,6 +4,7 @@ include 'fonction2.php';
 ?>
 
 <!DOCTYPE html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/Chart.js"></script>
 <html lang="en">
 
 <head>
@@ -16,6 +17,7 @@ include 'fonction2.php';
   <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/album/">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <link href="asset/css/style2.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -81,9 +83,22 @@ include 'fonction2.php';
         <?php echo $tab['donor_word'] ?>
       </p>
     </div>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <img class="fit-picture" src="asset\images\graphe_picture\giver\graphe_giver_<?php echo  $tab['id_donneur'] ?>.png" alt="Grapefruit slice atop a pile of other slices">
+        </div>
+      </div>
+    </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  <script src="asset/js/script.js"></script>
 </body>
 
 </html>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+</script>
+<script src="asset/js/script.js"></script>

@@ -26,6 +26,9 @@ function send_hard_questonary_value($bdd, $id_reciver, $leadership, $manual, $li
     $poo = $bdd->prepare("UPDATE tab_receveur SET have_finish_big_qcm = 1 WHERE id_receveur = $id_reciver");
     var_dump($poo);
     $result = $poo->execute();
+    $poo = $bdd->prepare("INSERT INTO tab_graphe_receiver (`id`, `id_receiver`, `leadership`, `manual`, `literary`, `analytical_thinking`, `wittiness`) VALUES (NULL,$id_reciver,$leadership,$manual,$literary,$analytical_thinking,$wittiness) ");
+    var_dump($poo);
+    $result = $poo->execute();
 }
 
 function get_donate($bdd, $id)

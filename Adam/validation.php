@@ -7,4 +7,4 @@ include 'fonction2.php';
 
 
 send_hard_questonary_value($bdd, $_SESSION['user']['id_receveur'], rand() % 100, rand() % 100, rand() % 100, rand() % 100, rand() % 100);
-header('Location: index.html.php');
+#header('Location: index.html.php');

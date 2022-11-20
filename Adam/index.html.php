@@ -29,6 +29,7 @@ $_
   <link href="asset/css/style.css" rel="stylesheet">
 
 </head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.min.js" integrity="sha512-tQYZBKe34uzoeOjY9jr3MX7R/mo7n25vnqbnrkskGr4D6YOoPYSpyafUAzQVjV6xAozAqUFIEFsCO4z8mnVBXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <body>
   <div class="collapse" id="navbarHeader">
@@ -82,6 +83,12 @@ $_
       echo '
     <div class="alert alert-danger" role="alert" display="none">
       Completing the MCQ is required to access baby correlation features <a href="questionaire.html.php" class="alert-link">Questonary</a>.
+    </div>
+    ';
+    } else {
+      echo '
+    <div class="alert alert-success" role="alert" display="none">
+      You have completed the MCQ,, you now have acces to your profile and baby correlation features
     </div>
     ';
     }
