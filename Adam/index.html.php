@@ -6,10 +6,7 @@ include 'fonction2.php';
 $i = 1;
 $_SESSION['user'] = get_reciver($bdd, $i);
 
-var_dump($_SESSION['user']);
 
-
-$_
 ?>
 
 
@@ -32,6 +29,9 @@ $_
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.min.js" integrity="sha512-tQYZBKe34uzoeOjY9jr3MX7R/mo7n25vnqbnrkskGr4D6YOoPYSpyafUAzQVjV6xAozAqUFIEFsCO4z8mnVBXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <body>
+  <?php
+  get_val_trie($bdd);
+  ?>
   <div class="collapse" id="navbarHeader">
     <div class="container">
       <div class="row">
@@ -96,7 +96,7 @@ $_
     <div class="album py-5">
       <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-          <?php foreach (get_all_donates($bdd) as $value) : ?>;
+          <?php foreach (get_val_trie($bdd) as $value) : ?>;
           <div class="col">
             <div class="card shadow-sm">
               <a href="profil.html.php?id=<?php echo $value['id_donneur'] ?>" class=" link">
@@ -104,7 +104,6 @@ $_
               </a>
               <div class="card-body">
                 <div class="description">
-                  <h2 class="class-title">Homme</h2>
                   <p class="card-text"><?php echo $value['age'] ?> ans</p>
                 </div>
                 <div class="d-flex justify-content-between align-items-center">
