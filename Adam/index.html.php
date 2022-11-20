@@ -1,6 +1,15 @@
 <?php
 include 'connexion_bd.php';
 include 'fonction2.php';
+
+
+$i = 1;
+$_SESSION['user'] = get_reciver($bdd, $i);
+
+var_dump($_SESSION['user']);
+
+
+$_
 ?>
 
 
@@ -68,7 +77,15 @@ include 'fonction2.php';
         </div>
       </div>
     </section>
-
+    <?php
+    if (isset($_SESSION['user']) && $_SESSION['user']['have_finish_big_qcm'] == null) {
+      echo '
+    <div class="alert alert-danger" role="alert" display="none">
+      Completing the MCQ is required to access baby correlation features <a href="questionaire.html.php" class="alert-link">Questonary</a>.
+    </div>
+    ';
+    }
+    ?>
     <div class="album py-5">
       <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -122,4 +139,5 @@ include 'fonction2.php';
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script src="asset/js/script.js"></script>
 </body>
+
 </html>

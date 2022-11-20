@@ -10,6 +10,24 @@ function get_all_donates($bdd)
     return $result;
 }
 
+function get_reciver($bdd, $id_reciver)
+{
+    $poo = $bdd->prepare("SELECT * FROM tab_receveur WHERE id_receveur = " . $id_reciver);
+    $result = $poo->execute();
+    $result = $poo->fetch();
+    return $result;
+}
+
+function send_hard_questonary_value($bdd, $id_reciver, $leadership, $manual, $literary, $analytical_thinking, $wittiness)
+{
+    $poo = $bdd->prepare("UPDATE tab_receveur SET leadership = $leadership, manual = $manual, literary = $literary, analytical_thinking =$analytical_thinking, wittiness =$wittiness WHERE id_receveur = $id_reciver");
+    var_dump($poo);
+    $result = $poo->execute();
+    $poo = $bdd->prepare("UPDATE tab_receveur SET have_finish_big_qcm = 1 WHERE id_receveur = $id_reciver");
+    var_dump($poo);
+    $result = $poo->execute();
+}
+
 function get_donate($bdd, $id)
 {
     $poo = $bdd->prepare("SELECT * FROM tab_donneur WHERE id_donneur =" . $id);
