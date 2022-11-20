@@ -19,6 +19,7 @@ function get_all_donates_trie($bdd)
 {
 
     $poo = $bdd->prepare("SELECT * FROM tab_donneur" GROUP_BY "id_donneur" DESC);
+
     $result = $poo->execute();
     $result = $poo->fetchAll();
     foreach ($result as $row) {

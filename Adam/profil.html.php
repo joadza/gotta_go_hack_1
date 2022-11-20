@@ -24,7 +24,7 @@ include 'fonction2.php';
   <div class="container">
     <div class="main-body">
       <?php $tab = get_donate($bdd, $_GET['id']); ?>
-      <div class="row gutters-sm">
+      <div class="row gutters-sm profil-top">
         <div class="col-md-4 mb-3">
           <div class="card">
             <div class="card-body">
@@ -34,44 +34,43 @@ include 'fonction2.php';
                 </div>
                 <div class="mt-3">
 
-                  <p class="text-secondary mb-1"><?php echo $tab['sexual_orientation'] ?> </p>
-                  <p class="text-muted font-size-sm"><?php echo $tab['height'][0] ?> m <?php echo substr($tab['height'], -2) ?></p>
-                  <p class="text-muted font-size-sm"><?php echo $tab['sport_week'] ?> séance de sport dans la semaine</p>
+                  <h3 class="text-secondary mb-1"><?php echo $tab['sexual_orientation'] ?> </h3>
+                  <h4 class="text-muted font-size-sm"><?php echo $tab['height'][0] ?> m <?php echo substr($tab['height'], -2) ?></h4>
+                  <p class="text-muted font-size-sm"><strong><?php echo $tab['sport_week'] ?></strong> séance de sport dans la semaine</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
         <div class="col-md-8">
-          <div class="card mb-3 description">
+          <div class="card mb-3 caract">
             <ul class="list-group list-group-flush">
-
               <hr>
               <div class="row">
-                <h6 class="mb-0">Age</h6>
-                <div class=" text-secondary">
-                  <?php echo $tab['age'] ?> ans
-                </div>
+                <h3 class="mb-0">Age</h6>
+                  <div class=" text-secondary">
+                    <?php echo $tab['age'] ?> ans
+                  </div>
               </div>
               <hr>
               <div class="row">
-                <h6 class="mb-0">Place of birth</h6>
-                <div class=" text-secondary">
-                  <?php echo $tab['origine'] ?>
-                </div>
+                <h3 class="mb-0">Place of birth</h6>
+                  <div class=" text-secondary">
+                    <?php echo $tab['origine'] ?>
+                  </div>
               </div>
               <hr>
               <div class="row">
-                <h6 class="mb-0">Centre d'intérêt</h6>
-                <div class=" text-secondary">
-                  <ul>
-                    <li>
-                      <?php echo $tab['center_interest_1'] ?>
-                    </li>
-                    <li><?php echo $tab['center_interest_2'] ?></li>
-                    <li><?php echo $tab['center_interest_3'] ?></li>
-                  </ul>
-                </div>
+                <h3 class="mb-0">Focus</h6>
+                  <div class=" text-secondary">
+                    <ul>
+                      <li>
+                        <?php echo $tab['center_interest_1'] ?>
+                      </li>
+                      <li><?php echo $tab['center_interest_2'] ?></li>
+                      <li><?php echo $tab['center_interest_3'] ?></li>
+                    </ul>
+                  </div>
               </div>
           </div>
         </div>
@@ -79,15 +78,15 @@ include 'fonction2.php';
     </div>
 
     <div class="description">
-      <p class="text-center">
+      <p class="text-description text-center">
         <?php echo $tab['donor_word'] ?>
       </p>
     </div>
 
 
-    <div class="container">
+    <div class="profil-graphic">
       <div class="row">
-        <div class="col">
+        <div class="col img-graphic">
           <img class="fit-picture" src="asset\images\graphe_picture\giver\graphe_giver_<?php echo  $tab['id_donneur'] ?>.png" alt="Grapefruit slice atop a pile of other slices">
         </div>
       </div>

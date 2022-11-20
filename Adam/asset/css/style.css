@@ -131,3 +131,26 @@
   color: #fff;
   padding: 2%;
 }
+
+.progress_bar{
+  background: linear-gradient(90deg, rgba(32,187,115,1) 19%, rgba(31,188,165,1) 55%, rgba(0,255,192,1) 98%);
+  opacity: 0.8;
+  background: none repeat scroll 0 0 #555555;
+  border-radius: 25px 25px 25px 25px;
+  box-shadow: 0 -1px 1px rgba(255, 255, 255, 0.3) inset;
+  height: 20px;
+  margin: 20px;
+  overflow: hidden; /* remove padding and add me */
+  position: relative;
+}
+
+.age{
+  padding: 1%;
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+.val-trie{
+  font-size: 1.75rem;
+  font-weight: 800;
+}

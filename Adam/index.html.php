@@ -39,14 +39,6 @@ $_SESSION['user'] = get_reciver($bdd, $i);
           <h4>About</h4>
           <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
         </div>
-        <div class="col-sm-4 offset-md-1 py-4">
-          <h4 class="text-white">Contact</h4>
-          <ul class="list-unstyled">
-            <li><a href="https://www.youtube.com/" class="text-white">Follow on Twitter</a></li>
-            <li><a href="https://www.youtube.com/" class="text-white">Like on Facebook</a></li>
-            <li><a href="https://www.youtube.com/" class="text-white">Email me</a></li>
-          </ul>
-        </div>
       </div>
     </div>
   </div>
@@ -57,6 +49,10 @@ $_SESSION['user'] = get_reciver($bdd, $i);
         <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
         <circle cx="12" cy="13" r="4" /></img>
         <strong class="text-white">ADAM</strong>
+      </a>
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+        <strong class="text-white"><?php echo $_SESSION['user']['name'] ?> </strong>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -102,15 +98,18 @@ $_SESSION['user'] = get_reciver($bdd, $i);
                 <img class="bd-placeholder-img card-img-top" src="<?php echo $value['photo_profil'] ?>" alt="" width="100%" height="100%"></img>
               </a>
               <div class="card-body">
-                <div class="description">
-                  <p class="card-text"><?php echo $value['age'] ?> ans</p>
+                <div class="carac">
+                  <div class="description">
+                    <p class="card-text age"><?php echo $value['age'] ?> ans</p>
+                  </div>
+                  <div class="description">
+                    <p class="card-text"><progress class="progress_bar" value="100" max="100"> </progress></p>
+                  </div>
                 </div>
-                <div class="description">
-                  <p class="card-text"><progress class="progress_bar" value="100" max="100"> </progress></p>
-                </div>
+
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="pourcent">
-                    <p><?php echo $value['val_trie'] ?>%</p>
+                    <p class="val_trie"><?php echo $value['val_trie'] ?>%</p>
                   </div>
                 </div>
               </div>
@@ -127,7 +126,7 @@ $_SESSION['user'] = get_reciver($bdd, $i);
         <div class="row">
           <div class="col-md-6 mt-md-0 mt-3">
 
-            <h5 class="text-uppercase font-weight-bold">Footer text 1</h5>
+            <h5 class="text-uppercase font-weight-bold">Politique de confidentialité</h5>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita sapiente sint, nulla, nihil
               repudiandae commodi voluptatibus corrupti animi sequi aliquid magnam debitis, maxime quam recusandae
               harum esse fugiat. Itaque, culpa?</p>
@@ -135,7 +134,7 @@ $_SESSION['user'] = get_reciver($bdd, $i);
           <hr class="clearfix w-100 d-md-none pb-3">
 
           <div class="col-md-6 mb-md-0 mb-3">
-            <h5 class="text-uppercase font-weight-bold">Footer text 2</h5>
+            <h5 class="text-uppercase font-weight-bold">Mentions légales</h5>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio deserunt fuga perferendis modi earum
               commodi aperiam temporibus quod nulla nesciunt aliquid debitis ullam omnis quos ipsam, aspernatur id
               excepturi hic.</p>
