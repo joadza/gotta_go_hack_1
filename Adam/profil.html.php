@@ -70,9 +70,9 @@
           </div>
         </div>
 
-        <div class="d-flex justify-content-center">
+        <div class="description">
           <p class="text-center">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore fugiat quo nulla voluptatem adipisci maiores odio nisi nam illum recusandae quasi asperiores nesciunt saepe, hic libero aut distinctio qui praesentium quisquam excepturi id labore animi. Magni rem similique, mollitia aliquid sequi nesciunt eligendi temporibus libero quidem consectetur, ipsam ipsum magnam!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor excepturi et nisi nam, rerum autem, consequuntur at ducimus voluptates quod nostrum? Cupiditate ducimus similique aut, et unde dolorum voluptatem iste magnam esse neque. Eligendi necessitatibus modi eaque aperiam ea? Facere neque nesciunt provident! Perspiciatis in temporibus ratione minus quam similique, recusandae iure a facere ullam debitis, facilis eaque, quo nobis nesciunt maiores accusamus deleniti perferendis eligendi. Porro, quod. Nihil, ducimus?
           </p>
         </div>
     </div>
