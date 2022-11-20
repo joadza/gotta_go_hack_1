@@ -105,6 +105,9 @@ $_SESSION['user'] = get_reciver($bdd, $i);
                 <div class="description">
                   <p class="card-text"><?php echo $value['age'] ?> ans</p>
                 </div>
+                <div class="description">
+                  <p class="card-text"><progress class="progress_bar" value="100" max="100"> </progress></p>
+                </div>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="pourcent">
                     <p><?php echo $value['val_trie'] ?>%</p>

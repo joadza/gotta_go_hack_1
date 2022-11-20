@@ -75,7 +75,7 @@ def give_pdf(tab):
     fig.write_image("graphe_giver_"+str(tab[1])+".png")
     query = "UPDATE tab_donneur SET photo_araigne = 'asset/images/graphe_picture/giver/graphe_giver_" + \
         str(res[1])+".png WHERE id_donneur = " + str(res[1])+""
-    execute_query_post(Connection, query)
+    execute_query_post(Connectio, query)
     del_giver(tab[0])
 
 

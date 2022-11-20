@@ -27,6 +27,10 @@
       font-size: 3.5rem;
     }
   }
+  .progress_bar{
+
+    height: 30px;
+  }
 
   .b-example-divider {
     height: 3rem;
@@ -66,7 +70,7 @@
   }
 
 /* CSS */
-/* Navbar */ 
+/* Navbar */
 .navbar{
   background: #8FDFF9;
 }
