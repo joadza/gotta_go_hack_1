@@ -72,6 +72,9 @@ def give_pdf(tab):
     print("Schèma créee")
     fig.write_image(
         "asset/images/graphe_picture/receiver/graphe_receiver_"+str(tab[1])+".png")
+    query = "UPDATE tab_receveur SET photo_profil = 'asset/images/graphe_picture/receiver/graphe_receiver_" + \
+        str(res[1])+".png WHERE id_receveur = " + str(res[1])+""
+    execute_query_post(Connection, query)
     del_receiver(tab[0])
 
 
