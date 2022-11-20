@@ -48,6 +48,24 @@ function get_image($bdd, $id)
     return $result;
 }
 
+
+function get_val_trie($bdd)
+{
+    $poo = $bdd->prepare("SELECT * FROM tab_donneur WHERE 1");
+    $result = $poo->execute();
+    $result = $poo->fetchAll();
+    for ($i = 0; $i < count($result); $i++) {
+        $result[$i]['val_trie'] = intval(get_value_correlation_donate($bdd, $result[$i]['id_donneur']));
+    }
+
+    $columnes = array_column($result, 'val_trie');
+    array_multisort($columnes, SORT_DESC, $result);
+
+
+    return $result;
+}
+
+
 function get_value_correlation_donate($bdd, $id_donate)
 {
     $nb;
