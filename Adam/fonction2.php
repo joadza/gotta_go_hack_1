@@ -10,6 +10,14 @@ function get_all_donates($bdd)
     return $result;
 }
 
+function get_donate($bdd, $id)
+{
+    $poo = $bdd->prepare("SELECT * FROM tab_donneur WHERE id_donneur =" . $id);
+    $result = $poo->execute();
+    $result = $poo->fetch();
+    return $result;
+}
+
 
 function get_image($bdd, $id)
 {
