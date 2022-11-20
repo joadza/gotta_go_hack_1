@@ -1,0 +1,34 @@
+.main-body{
+    margin: 5%;
+}
+
+.card .mb-3{
+    background: red;
+}
+
+.card-body{
+    padding: 0;
+    background-color: #8FDFF9;
+}
+
+.profile{
+    margin: 10%;
+}
+
+.profile-img{
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+
+.description{
+    border: none;
+}
+.row{
+    margin: 3%;
+}
+
+.page-footer{
+    background: #8FDFF9;
+    color: #fff;
+    padding: 2%;
+  }

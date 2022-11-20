@@ -1,4 +1,4 @@
-const barCanvas = document.getElementById('barChart');
+/*const barCanvas = document.getElementById('barChart');
 const barChart = new Chart(barCanvas, {
     type: 'bar',
     data: {
@@ -8,4 +8,4 @@ const barChart = new Chart(barCanvas, {
             
         }]
     }
-});
+});*/
