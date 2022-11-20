@@ -100,7 +100,7 @@ $_
           <div class="col">
             <div class="card shadow-sm">
               <a href="profil.html.php?id=<?php echo $value['id_donneur'] ?>" class=" link">
-                <img class="bd-placeholder-img card-img-top" src="<?php echo $value['photo_profil'] ?>  " alt="" width="100%" height="100%"></img>
+                <img class="bd-placeholder-img card-img-top" src="<?php echo $value['photo_profil'] ?>" alt="" width="100%" height="100%"></img>
               </a>
               <div class="card-body">
                 <div class="description">
