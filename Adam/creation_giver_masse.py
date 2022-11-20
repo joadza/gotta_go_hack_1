@@ -82,7 +82,7 @@ def give_pdf(tab):
 Connectio = create_server_connection("localhost", "root", "")
 
 
-for i in range(0, 40):
+for i in range(1, 50):
 
     origin = ['France', 'Germany', 'Italy', 'Spain', 'United Kingdom', 'United States', 'Canada', 'Australia', 'New Zealand',
               'Japan', 'China', 'India', 'Brazil', 'Mexico', 'Argentina', 'South Africa', 'Nigeria', 'Egypt', 'Russia', 'Turkey']

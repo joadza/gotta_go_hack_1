@@ -62,7 +62,7 @@ function get_val_trie($bdd)
     array_multisort($columnes, SORT_DESC, $result);
 
 
-    return $result;
+    return array_slice($result, 0, 15);
 }
 
 
