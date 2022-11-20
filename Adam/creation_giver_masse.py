@@ -60,19 +60,20 @@ def give_pdf(tab):
 
     fig = go.Figure(
         data=[
-            go.Scatterpolar(r=data1, theta=categories,
+            go.Scatterpolar(r=100, theta=categories,
                             fill='toself', name='data1 1'),
 
         ],
         layout=go.Layout(
             title=go.layout.Title(text='character traits'),
-            polar={'radialaxis': {'visible': False}},
+
+            polar={'radialaxis': {'visible': True, 'range': [0, 100]}},
             showlegend=True
         )
     )
 
     fig.write_image("graphe_giver_"+str(tab[1])+".png")
-    query = "UPDATE tab_donneur SET photo_profil = 'asset/images/graphe_picture/giver/graphe_giver_" + \
+    query = "UPDATE tab_donneur SET photo_araigne = 'asset/images/graphe_picture/giver/graphe_giver_" + \
         str(res[1])+".png WHERE id_donneur = " + str(res[1])+""
     execute_query_post(Connection, query)
     del_giver(tab[0])
@@ -81,7 +82,7 @@ def give_pdf(tab):
 Connectio = create_server_connection("localhost", "root", "")
 
 
-for i in range(0, 30):
+for i in range(0, 40):
 
     origin = ['France', 'Germany', 'Italy', 'Spain', 'United Kingdom', 'United States', 'Canada', 'Australia', 'New Zealand',
               'Japan', 'China', 'India', 'Brazil', 'Mexico', 'Argentina', 'South Africa', 'Nigeria', 'Egypt', 'Russia', 'Turkey']
@@ -100,14 +101,14 @@ for i in range(0, 30):
              'Rugby', 'Softball', 'Handball', 'Water polo', 'Boxing', 'Wrestling',
              'Judo', 'Taekwondo', 'Karate', 'Gymnastics', 'Diving', 'Swimming']
     text_of_thanks = 'I am very grateful for your help, I will never forget it i will always remember you my son is now your son, i gonna be grattful for youAnd i Hope you gonna be fine'
-    req = "INSERT INTO `tab_donneur`(`id_donneur`, `photo_profil`, `age`, `sexual_orientation`, `origine`, `height`, `color_eyes`, `hair_color`, `hairiness`, `sport_week`, `leadership`, `humor`, `manual`, `literary`, `analytical_thinking`, `wittiness`, `donor_word`, `center_interest_3`, `center_interest_1`, `center_interest_2`) VALUES (NULL,NULL,'"+str(
+    req = "INSERT INTO `tab_donneur`(`id_donneur`, `photo_profil`, `age`, `sexual_orientation`, `origine`, `height`, `color_eyes`, `hair_color`, `hairiness`, `sport_week`, `leadership`, `humor`, `manual`, `literary`, `analytical_thinking`, `wittiness`, `donor_word`, `center_interest_3`, `center_interest_1`, `center_interest_2`) VALUES (NULL,'asset/medias/"+str(i)+".jpg','"+str(
         random.randint(37, 54))+"','Hetero','"+str(origin[random.randint(0, len(origin)-1)])+"','"+str(random.randint(165, 189))+"','"+str(eyes_color[random.randint(0, len(eyes_color)-1)]) + "','Blond','"+str(different_value[random.randint(0, len(different_value)-1)])+"','"+str(random.randint(0, 6)) + "','"+str(random.randint(23, 100))+"','"+str(random.randint(23, 100))+"','"+str(random.randint(23, 100))+"','"+str(random.randint(23, 100))+"','"+str(random.randint(23, 100))+"','"+str(random.randint(23, 100))+"','"+text_of_thanks+"','"+sport[random.randint(0, len(sport)-1)]+"','"+sport[random.randint(0, len(sport)-1)]+"','"+sport[random.randint(0, len(sport)-1)]+"')"
     print(req)
     execute_query_post(Connectio, req)
     res = execute_query_get(
         Connectio, "SELECT id_donneur FROM `tab_donneur` WHERE 1 ORDER BY id_donneur DESC LIMIT 1")
     id_donneur = res[0][0]
-    res = query = "UPDATE tab_donneur SET photo_profil = 'asset/images/graphe_picture/giver/graphe_giver_" + \
+    res = query = "UPDATE tab_donneur SET photo_araigne = 'asset/images/graphe_picture/giver/graphe_giver_" + \
         str(id_donneur)+".png' WHERE id_donneur = " + str(id_donneur)+""
     print(res)
     execute_query_post(Connectio, query)

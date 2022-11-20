@@ -49,11 +49,11 @@ def del_giver(id):
 
 def give_pdf(tab):
 
-    categories = ['Humor', 'literary', 'manual,leadership',
-                  'analytical thinking', 'wittines']
+    categories = ['literary', 'manual,leadership',
+                  'Humor', 'analytical thinking', 'wittines']
     categories = [*categories, categories[0]]
 
-    data1 = [tab[0], tab[1], tab[2], tab[3], tab[4]]
+    data1 = [tab[2], tab[3], tab[4], tab[5], tab[6]]
 
     data1 = [*data1, data1[0]]
 
@@ -70,9 +70,10 @@ def give_pdf(tab):
         )
     )
 
-    fig.write_image("graphe_giver_"+str(tab[1])+".png")
-    query = "UPDATE tab_donneur SET photo_profil = 'asset/images/graphe_picture/giver/graphe_giver_" + \
-        str(res[1])+".png WHERE id_donneur = " + str(res[1])+""
+    fig.write_image(
+        "asset/images/graphe_picture/giver/graphe_giver_"+str(tab[1])+".png")
+    query = "UPDATE tab_donneur SET photo_araigne = 'asset/images/graphe_picture/giver/graphe_giver_" + \
+        str(tab[1])+".png' WHERE id_donneur = " + str(tab[1])+""
     execute_query_post(Connection, query)
     del_giver(tab[0])
 
